@@ -1,0 +1,365 @@
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive;
+    height: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+   /* overflow: hidden;*/
+    position: relative;
+    
+}
+
+.header {
+    height: 50px;
+    position: fixed;
+    background-color: rgba(25, 74, 115,0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.header:hover {
+    opacity: 1;
+    
+    
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.nav__item {
+    color: white;
+    text-decoration: none;
+
+}
+
+.section {
+    height: 100vh;
+
+}
+
+.main {
+    background-image: url(Avatar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    z-index: 10;
+    position: relative;
+    display: flex;
+    width: 75%;
+    margin-bottom: 40px;
+}
+
+.about__avatar{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(209, 75, 75);
+    flex-shrink: 0;
+    margin-right: 15px;
+    background-image: url(Canta.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    transition: all 1s ease 4s;
+}
+
+.about__avatar:hover{
+    transform: rotate(355deg);
+}
+
+.about__img{
+    height: 100%;
+}
+
+.about__info{
+    background-color: rgba(71, 113, 148, 0.9);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    border: 5px solid rgb(209, 75, 75);
+}
+
+@keyframes title-run {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100px);
+        color: #d42726;
+    }
+}
+
+.about__title{
+    font-size: 50px;
+    margin: 0;
+    animation: title-run 2s infinite alternate;
+}
+
+.about__text{
+    font-size: 25px;
+}
+
+@keyframes compliment__title{
+    0%{
+    transform: translateX(0);
+    color: #b31313;
+    }
+    50%{
+    color: #6ace0d;
+    }
+    100%{
+    transform: translateX(0);
+    color: #0c29ad;
+    }
+    }
+.button{
+    z-index: 10;
+    position: relative;
+    background-color: #d42726;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: all 1s cubic-bezier(.09,.45,.96,.47) 0s;
+}
+
+.button:hover {
+    box-shadow: 0px 5px 10px 2px rgba(109, 195, 119, 0.83);
+}
+
+.compliment {
+    background-image: url(Noviy-God-2048x1152.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.compliment__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+}
+
+.compliment__title {
+    animation: compliment__title 1s infinite alternate;
+}
+
+
+.compliment__img-wrap {
+    height: 40%;
+    position: relative;
+}
+
+@keyframes compliment__img{
+    0%{
+    transform: translateY(0);
+    }
+    50%{
+    transform: translateY(50px);
+    }
+    100%{
+    transform: translateY(100px);
+    }
+    }
+
+.compliment__img {
+    height: 100%;
+    animation: compliment__img 1s infinite alternate;
+}
+
+@keyframes compliment__img_talk{
+    0%{
+    transform: translateY(0);
+    color: #66b319;
+    }
+    50%{
+    transform: translateY(50px);
+    color: #1e1eb4;
+    }
+    100%{
+    transform: translateY(100px);
+    color: #8b0000;
+    }
+    }
+
+.compliment__img_talk {
+    position: absolute;
+    top: 50%;
+    left: -35%;
+    animation: compliment__img_talk 1s infinite alternate;
+}
+
+.poem {
+    background-image: url(фон.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.poem__title {
+    text-align: center;
+
+}
+
+.poem__list {
+    display: flex;
+    justify-content: center;
+}
+
+.poem__item {
+    width: 300px;
+    min-height: 580px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f5f5dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    padding: 20px;
+    transition: all 0.8s ease 0s;
+}
+
+.poem__item:hover {
+    transform: scale(1.2);
+    border: 2px solid rgb(10, 64, 145);
+}
+
+.poem__img-wrap {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.poem_img {
+    height: 100%;
+}
+
+.msg{
+    background-image: url(nu4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.msg__title{
+    margin-bottom: 68px;
+}
+
+.form-msg{
+    width: 600px;
+    background-image: url(noviy-god100.jpg);
+    background-position: right top;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 40px 40px 65px;
+    position: relative;
+}
+
+.form-msg__content{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-msg__row{
+    margin-bottom: 10px;
+}
+
+.form-msg__title-input{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-msg__input,.form-msg__massage{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+
+.form-msg__massage{
+    height: 200px;
+    resize: none;
+}
+
+.form-msg__button-wrap{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-msg__submit{
+    color: #ffffff;
+    background-color: #8b0000;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px  20px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.form-msg__img-wrap{
+    height: 200px;
+    position: absolute;
+    top: -158px;
+    right: 15px;
+}
+
+@keyframes form-msg__img{
+    0%{
+    transform: translatex(0);
+    }
+    100%{
+    transform: translatex(-300px);
+    }
+    }
+
+.form-msg__img{
+    height: 100%;
+    animation: form-msg__img 1s infinite alternate;
+}
